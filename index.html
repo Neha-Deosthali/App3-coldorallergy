@@ -91,24 +91,62 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!--page one question one-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+        	<p>Are your eyes watery or itchy.</p>    
     	</div>
+	
+<!-- yes and no buttons-->  
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
+
 </div>
 
-<div class="page" id="two">
+<!-- page two question two-->	
+<div id ="header" class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p>Do you have a fever?.</p>
 	</div>
+<-- yes and no buttons-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#three"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
+</div>	
+	
+<!-- page three question three-->	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat.</p>
+	</div>
+<-- yes and no buttons-->
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#four"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
+</div>	
+
+<!-- page three question three-->	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal?.</p>
+	</div>
+<-- yes and no buttons-->
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
 </div>	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
