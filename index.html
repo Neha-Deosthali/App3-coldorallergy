@@ -48,6 +48,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function getResults() {
+		var results = document.getElementById("results");
+		var allergyprob = (allergy_count/4)*100;
+		var coldprob = (cold_count/4)*100;
+		<p> "Chance of allergies is" + allergyprob + "Chance of cold is" + coldprob </p>
 
   </script>
 
@@ -76,7 +82,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies? V5</h1> 
+	<h1>Cold or Allergies? V6</h1> 
 </div>
 	
 <div id="content" class="w3-container"> 
@@ -127,7 +133,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat.</p>
 	</div>
-<-- yes and no buttons-->
+<--! yes and no buttons-->
 	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#four"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
 </div>	
@@ -141,7 +147,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal?.</p>
 	</div>
-<-- yes and no buttons-->
+<!-- yes and no buttons-->
 	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
 </div>	
@@ -152,6 +158,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="results" class="w3-container">
+		<!--telling function above to place results on this page-->
+		<p id="results" </p>
 		<a href= "#six onclick="getResults()" class="w3-btn w3-black"> get results </a>
 									     </div>
 									     </div>								     
