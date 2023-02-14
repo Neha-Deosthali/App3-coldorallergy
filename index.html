@@ -19,7 +19,7 @@ Brief Description of Goal of Code:
 Asking questions to determine if the individual has a cold or allergies based on the symptoms
  
 Known Issues:
-asking about symptoms of eye irritation, a fever, sore throat, and whether the symptoms are seasonal or chronic
+Asking about symptoms of eye irritation, a fever, sore throat, and whether the symptoms are seasonal or chronic
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -35,7 +35,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0; <!--variable to count the number of times an allergy symptom is counted-->
+        var allergy_count = 0; <!--variable to count the number of times an allergy symptom is counted, initial setting at zero-->
         var cold_count = 0;
 
 
@@ -46,18 +46,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
         function coldAdd(){
-            cold_count = cold_count + 1;
+            cold_count = cold_count + 1; <!-- function counting number of times symptom for cold is selected-->
         }
 	
+	<!--function to calculate the results-->
 	function getResults() {
-		var results = document.getElementById("results");
-		var allergyprob = (allergy_count/4)*100;
-		var coldprob = (cold_count/4)*100;
-		resultText.innerHTML = "Chance of allergies is" + allergyprob + "<br> Chance of cold is" + coldprob;
+		var resultText = document.getElementById("results"); <!--to display results on page-->
+		var allergyprob = (allergy_count/4)*100; <!--calculating the probability of allergy-->
+		var coldprob = (cold_count/4)*100; <!--calculating the probability of cold-->
+		resultText.innerHTML = "Chance of allergies is" + allergyprob + "<br> Chance of cold is" + coldprob; <!--text to print on screen--> 
 
   </script>
 
-
+<!--code for how the display should be of the website-->
 <style>	
 .body {
      margin: 0em;
@@ -81,26 +82,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies? V8</h1> 
+<div id="header" class="w3-container w3-flat-carrot"> <!--header of the first page-->
+	<h1>Cold or Allergies?</h1> 
 </div>
 	
+<!--introduction page--> 
 <div id="content" class="w3-container"> 
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> 
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--question asked on that page-->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> 
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--first "get started" button code-->
 	
+	<!--disclaimers-->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <!--page one question one-->
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--page 1 header-->
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container"> <!--page one question-->
         	<p>Are your eyes watery or itchy.</p>    
     	</div>
 	
@@ -112,11 +115,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!-- page two question two-->	
 <div class="page" id="two">
-	<div id ="header" class="w3-container w3-flat-carrot">
+	<div id ="header" class="w3-container w3-flat-carrot">  <!--page 2 header-->
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!--page 2 question-->
 		<p>Do you have a fever?.</p>
 	</div>
 <!-- yes and no buttons-->
@@ -126,25 +129,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <!-- page three question three-->	
 <div class="page" id="three">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--page 3 header-->
 		<h1>Question 3</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!--page 3 question-->
 		<p>Do you have a sore throat.</p>
 	</div>
-<--! yes and no buttons-->
+<!-- yes and no buttons-->
 	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#four"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
 </div>	
 
 <!-- page three question three-->	
 <div class="page" id="four">
-	<div id="header" class="w3-container w3-flat-carrot"> //code of header
-		<h1>Question 4</h1> <!--what the header will say-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!--page 4 header-->
+		<h1>Question 4</h1> 
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container">   <!--page 4 question-->
 		<p>Are your symptoms seasonal?.</p>
 	</div>
 <!-- yes and no buttons-->
@@ -152,9 +155,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
 </div>	
 	
-<div class= "page" id= "five"> 
-	<div id="header" class="w3-container w3-flat-carrot"> 
-		<h1>Results</h1> 
+<!--results page set up-->
+<div class= "page" id= "five">          
+	<div id="header" class="w3-container w3-flat-carrot">   <!--results page header-->
+		<h1>results</h1> 
 	</div>
 	
 	<div id="results" class="w3-container">
