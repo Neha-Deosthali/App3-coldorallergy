@@ -49,12 +49,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1; <!-- function counting number of times symptom for cold is selected-->
         }
 	
-	<!--function to calculate the results-->
+	<!-- function to compute the final percentages -->
 	function getResults() {
-		var resultText = document.getElementById("results"); <!--to display results on page-->
-		var allergyprob = (allergy_count/4)*100; <!--calculating the probability of allergy-->
-		var coldprob = (cold_count/4)*100; <!--calculating the probability of cold-->
-		resultText.innerHTML = "Chance of allergies is" + allergyprob + "<br> Chance of cold is" + coldprob; <!--text to print on screen--> 
+	<!-- given line of code in instructions to display on correct page -->
+		var resultText = document.getElementById("results");
+	<!-- calculations to change the number into a percent -->
+		var allergyPercent = (allergy_count / 4) * 100;
+		var coldPercent = (cold_count / 4) * 100;
+	<!-- given line of code in indstructions to display probability -->
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		
+	}
 
   </script>
 
@@ -155,18 +160,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
 </div>	
 	
-<!--results page set up-->
-<div class= "page" id= "five">          
-	<div id="header" class="w3-container w3-flat-carrot">   <!--results page header-->
-		<h1>results</h1> 
+<!--results page -->
+	<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>results</h1>
+<!-- code to pull information from "results" function at the top of the code, indiciating the percent cold and percent allergy -->
 	</div>
 	
-	<div id="results" class="w3-container">
-		<!--telling function above to place results on this page-->
+
+<!--button to click on results -->
+		
+	<div id="content" class="w3-container">
 		<p id="results" </p>
-		<a href= "#five onclick="getResults()" class="w3-btn w3-black"> get results </a>
-									     </div>
-									     </div>								     
+		<a href="#five" onclick="getResults()" class="w3-btn w3-black"> Click Here! </a>
+
+	</div>
+
+</div>							     
 									     
 									    
 
